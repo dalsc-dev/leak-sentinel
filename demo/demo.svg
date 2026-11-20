@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090c10" />
+      <stop offset="100%" stop-color="#0d1117" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+  </defs>
+
+  <!-- Terminal Window Background -->
+  <rect x="0" y="0" width="960" height="480" rx="12" fill="url(#bgGrad)" stroke="#30363d" stroke-width="1.5" />
+
+  <!-- Terminal Title Bar -->
+  <rect x="0" y="0" width="960" height="40" rx="12" fill="#161b22" />
+  <rect x="0" y="28" width="960" height="12" fill="#161b22" />
+  <circle cx="24" cy="20" r="6" fill="#ff5f56" />
+  <circle cx="44" cy="20" r="6" fill="#ffbd2e" />
+  <circle cx="64" cy="20" r="6" fill="#27c93f" />
+  <text x="480" y="25" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="13" text-anchor="middle">terminal — npx leak-sentinel</text>
+
+  <!-- Terminal Content -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" fill="#c9d1d9">
+    <!-- Prompt -->
+    <text x="32" y="75" fill="#10b981" font-weight="bold">$</text>
+    <text x="48" y="75" fill="#f0f6fc">npx leak-sentinel</text>
+
+    <!-- Banner -->
+    <text x="32" y="105" fill="#10b981" font-weight="bold">leak-sentinel v1.0.0</text>
+    <text x="210" y="105" fill="#8b949e">— Zero-Knowledge Privacy &amp; Network Leak Audit Engine</text>
+
+    <!-- Score Card Box -->
+    <rect x="32" y="125" width="896" height="65" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1" />
+    <text x="52" y="152" fill="#8b949e" font-size="11" letter-spacing="1">PRIVACY SECURITY SCORE</text>
+    <text x="52" y="176" fill="#10b981" font-size="22" font-weight="bold">85 / 100</text>
+    <text x="145" y="176" fill="#06b6d4" font-size="14" font-weight="bold">[Grade: A]</text>
+
+    <text x="320" y="152" fill="#8b949e" font-size="11" letter-spacing="1">AUDIT SUMMARY</text>
+    <text x="320" y="176" fill="#ef4444" font-weight="bold">0 Critical</text>
+    <text x="410" y="176" fill="#f59e0b" font-weight="bold">1 High</text>
+    <text x="480" y="176" fill="#38bdf8" font-weight="bold">1 Medium</text>
+    <text x="570" y="176" fill="#10b981" font-weight="bold">6 Passed</text>
+
+    <text x="750" y="165" fill="#8b949e" font-size="11">Time: &lt; 95ms</text>
+
+    <!-- Findings Section -->
+    <text x="32" y="220" fill="#f0f6fc" font-weight="bold">Detected Vulnerabilities &amp; Actionable Remediations:</text>
+
+    <!-- Finding 1 -->
+    <text x="32" y="250" fill="#f59e0b" font-weight="bold">1. [HIGH]</text>
+    <text x="100" y="250" fill="#f0f6fc" font-weight="bold">Unencrypted Local Gateway DNS Resolution</text>
+    <text x="52" y="272" fill="#8b949e">Queries routed to router (192.168.1.1). ISP can monitor lookups in cleartext on UDP port 53.</text>
+    <text x="52" y="292" fill="#10b981">-> Fix: Configure DoH/DoT using Quad9 (9.9.9.9) or Mullvad (194.242.2.2).</text>
+
+    <!-- Finding 2 -->
+    <text x="32" y="325" fill="#38bdf8" font-weight="bold">2. [MEDIUM]</text>
+    <text x="120" y="325" fill="#f0f6fc" font-weight="bold">High-Entropy WebGL GPU Hardware Exposed</text>
+    <text x="52" y="347" fill="#8b949e">Browser exposes raw graphics card renderer ("Apple M2 Max") to web tracking scripts.</text>
+    <text x="52" y="367" fill="#10b981">-> Fix: Enable WebGL vendor masking or use privacy-focused browser profiles.</text>
+
+    <!-- Safe Checks -->
+    <text x="32" y="405" fill="#10b981">-> WebRTC STUN Public IP Leak Check: PASSED (No public IP exposed)</text>
+    <text x="32" y="425" fill="#10b981">-> LAN 0.0.0.0 Sensitive Services Audit: PASSED (Zero unauthenticated DBs exposed)</text>
+    <text x="32" y="445" fill="#10b981">-> HTTP Proxy Header IP Leak Check: PASSED (Clean upstream headers)</text>
+  </g>
+</svg>

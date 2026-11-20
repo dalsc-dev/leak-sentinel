@@ -1,0 +1,30 @@
+name: Bug Report
+description: Report an issue or unexpected behavior in leak-sentinel
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thank you for helping make leak-sentinel better.
+  - type: input
+    id: environment
+    attributes:
+      label: Operating System & Node Version
+      description: What OS and Node.js version are you running?
+      placeholder: macOS 14.5, Node v20.10.0
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Description of the Issue
+      description: What leak or unexpected output occurred?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction Steps
+      description: Command or API call executed.
+      placeholder: $ npx leak-sentinel --web
+    validations:
+      required: true

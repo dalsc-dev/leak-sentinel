@@ -1,0 +1,52 @@
+{
+  "name": "leak-sentinel",
+  "version": "1.0.0",
+  "description": "Zero-knowledge privacy & network leak audit engine for developers, VPN users, and security engineers.",
+  "type": "module",
+  "main": "src/index.js",
+  "types": "index.d.ts",
+  "bin": {
+    "leak-sentinel": "bin/cli.js",
+    "leak-probe": "bin/probe.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "public",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "demo": "node demo/run-demo.js",
+    "start": "node bin/cli.js",
+    "probe": "node bin/probe.js"
+  },
+  "keywords": [
+    "privacy",
+    "security",
+    "dns-leak",
+    "webrtc-leak",
+    "network-audit",
+    "cybersecurity",
+    "lan-exposure",
+    "vpn-test",
+    "browser-fingerprint",
+    "cli",
+    "developer-tools"
+  ],
+  "author": "dalsc-dev <shanusathar@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dalsc-dev/leak-sentinel.git"
+  },
+  "homepage": "https://github.com/dalsc-dev/leak-sentinel#readme",
+  "bugs": {
+    "url": "https://github.com/dalsc-dev/leak-sentinel/issues"
+  }
+}
